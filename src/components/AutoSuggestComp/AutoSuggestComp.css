@@ -1,0 +1,39 @@
+.option{
+    background-color: aliceblue;
+    list-style: none;
+}
+.suggestion-list {
+    list-style: none;
+    color: black;
+    margin: 0px;
+  padding-left:0px ;
+  position: relative; /* Set input to relative positioning */
+  z-index: 2;
+  
+   
+}
+input{
+    width: 40vh;
+    height: 5vh;
+    border-radius: 20vh;
+    color: black;
+    background-color: azure;
+    //padding-left: 30vh;
+}
+input ::placeholder{
+    text-align: start;
+    color: black;
+}
+li{
+    border: 0.1px solid black;
+    width: 40vh;
+    font-size: 2.5vh;
+    position: relative;
+    cursor: pointer;
+    margin: 1px;
+    padding: 1px;
+    background-color: rgba(240, 248, 255, 0.233);
+}
+.city-autocomplete{
+    height:12vh;
+}

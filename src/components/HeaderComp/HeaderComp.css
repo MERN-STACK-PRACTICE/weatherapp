@@ -1,0 +1,30 @@
+
+.main-header{
+    padding: 4vh 5vh 2vh 5vh;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+}
+.main-header h1{
+    font-size: 4vh;
+   
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+.navbar li{
+    background-color: rgba(0, 0, 0, 0.039);
+    border: none;
+    width: max-content;
+    text-align: center;
+    margin: 0vh 2vh 0vh 2vh;
+    padding: 1vh;
+}
+.navbar li:hover{
+    color: aqua;
+    background-color: black;
+    padding: 0.5vh;
+}
