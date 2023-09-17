@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+//import 'font-awesome/css/font-awesome.min.css';
 import './WeatherComp.css';
 import warm from '../../assets/warm.png'
 import rain from '../../assets/rain.png'
@@ -12,7 +13,7 @@ import rainyBg from '../../assets/rainyBg.jpg'
 import cloudyBg from '../../assets/cloudyBg.jpg'
 import thunderstormBg from '../../assets/thunderstormBg.jpg'
 import clearBg from '../../assets/clearBg.jpg'
-import 'font-awesome/css/font-awesome.min.css';
+//import 'font-awesome/css/font-awesome.min.css';
 import CityAutocomplete from '../AutoSuggestComp/AutoSuggestComp';
 
 const WeatherComp = () => {
@@ -96,7 +97,20 @@ if(event.key=='enter')
             <CityAutocomplete onCityChange={handleCityChange} />
             <button 
             onClick={fetchData} >
-            <i className="fa fa-search"></i>
+            <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="11" cy="11" r="8" />
+  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+</svg>
             </button>
           </div>
                 <div className='image-main'>
@@ -124,7 +138,21 @@ if(event.key=='enter')
             {weatherData !== null && (
               <div className="result-content">
               <div className='display-num'>{kelvinToCelsius(weatherData.main.temp)} °C</div>
-                <p><i className="fa fa-map-marker"></i> {weatherData.name}</p>
+                <p><<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="6" />
+  <path d="M12 2a5 5 0 0 1 5 5c0 5-5 10-5 10s-5-5-5-10a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3c0 1.96 1.79 5.36 3 6.96 1.21-1.6 3-5 3-6.96a3 3 0 0 0-3-3z" />
+</svg>
+ {weatherData.name}</p>
                  
                 <p >Feels Like {kelvinToCelsius(weatherData.main.feels_like)} °C</p>
                 <div className='min-max'>
